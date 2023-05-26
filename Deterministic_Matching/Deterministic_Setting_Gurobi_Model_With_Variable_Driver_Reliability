@@ -83,9 +83,8 @@ if __name__ == '__main__':
     m.optimize()  
     
     # Initialise graph
-    B = nx.Graph()
-
-    # Add nodes with the node attribute "bipartite"
+    B = nx.Graph() 
+    
     top_nodes = ['Driver ' + str(i) for i in range(len(driverlocation))][::-1]
     bottom_nodes = ['Order ' + str(i) for i in range(len(orderlocation))][::-1]
     B.add_nodes_from(top_nodes, bipartite=0)
