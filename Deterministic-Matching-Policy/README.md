@@ -1,1 +1,3 @@
-Yes
+We developed a novel approach to address dynamic matching in crowdsourced delivery considering matching fairness. 
+
+We implemented a deterministic matching policy in a rolling horizon framework. We first determine the driver pool sizes using Boltzmann exploration, which is passed on to the dynamic matching algorithm. At each iteration, the dynamic matching algorithm optimizes the current matching decisions. Once we execute the algorithm for the entire planning horizon and obtain the expected driver utilization and service level, we use these results to update the value function and based on the updated value function redetermine the driver pool sizes using Boltzmann exploration. The process is repeated for a fixed number of iterations after which the best found driver pool sizes vector is returned. 
